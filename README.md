@@ -3,15 +3,15 @@
 ## 環境
 
 - Python 3.6.1
-- Keras 2.0.6
-- Tensorflow 1.2.1
 
-- 追加パッケージ
+
+## インストール
 
 ```
-$ pip install h5py
-$ pip install Pillow
-$ pip install sklearn
+$ git clone https://github.com/yoshiweb/keras-image-classify.git
+$ cd keras-image-classify
+$ pip install -r requirements.txt
+$ cd src
 ```
 
 
