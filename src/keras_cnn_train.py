@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import keras
+import matplotlib.pyplot as plt
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
@@ -42,7 +43,7 @@ for label_num in range(num_classes):
     dir_name = files_dir[label_num]
     dir_path = os.path.join(path, dir_name)
 
-    f.write(dir_name+"\n")
+    f.write(dir_name+'\n')
 
     # ファイル一覧を取得
     dir_files = os.listdir(dir_path)
@@ -67,7 +68,7 @@ Y = []
 for src in pathList :
     # 画像読み込み
     img = Image.open(src) # PIL (Pillow(Python Imaging Library))で開く
-    img = img.convert("RGB") # RGB
+    img = img.convert('RGB') # RGB
     img = img.resize((image_w, image_h)) # リサイズ
     data = np.asarray(img) # numpyのarrayにする
     X.append(data)
@@ -132,7 +133,7 @@ x_test /= 255
 
 
 # 学習開始
-model.fit(x_train, y_train,
+history = model.fit(x_train, y_train,
             batch_size=batch_size,
             epochs=epochs,
             validation_data=(x_test, y_test),
@@ -140,3 +141,37 @@ model.fit(x_train, y_train,
 
 # 学習済みのモデルの保存
 model.save('keras_cnn_model.h5')
+
+
+
+
+
+
+
+def plot_history(history):
+    # print(history.history.keys())
+
+    # 精度の履歴をプロット
+    plt.figure()
+    plt.plot(history.history['acc'])
+    plt.plot(history.history['val_acc'])
+    plt.title('model accuracy')
+    plt.xlabel('epoch')
+    plt.ylabel('accuracy')
+    plt.legend(['acc', 'val_acc'], loc='lower right')
+    plt.savefig('keras_cnn_train_1.png')
+    # plt.show()
+
+    # 損失の履歴をプロット
+    plt.figure()
+    plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.title('model loss')
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
+    plt.legend(['loss', 'val_loss'], loc='upper right')
+    plt.savefig('keras_cnn_train_2.png')
+    # plt.show()
+
+# 学習履歴をプロット
+plot_history(history)
