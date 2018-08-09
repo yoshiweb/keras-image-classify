@@ -51,23 +51,13 @@ $ python keras_cnn_train.py
 
 ## 予測・分類
 
-判別したい画像（例：test.jpg）を用意して実行
+判別したい画像を引数に渡して実行
 
 ```
-$ python keras_cnn_predict.py test.jpg
+$ python keras_cnn_predict.py img/orange/image_01.jpg
 Using TensorFlow backend.
-2018-01-30 18:15:45.143201: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2018-01-30 18:15:45.143224: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
-2018-01-30 18:15:45.143229: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
-2018-01-30 18:15:45.143233: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
-[[  4.40120971e-08   4.55074513e-07   9.99999523e-01]]
-
-各ラベルの確率
-0.0000000440
-0.0000004551
-0.9999995232
-一番大きいラベルを予測結果として判定
-2
+2018-08-09 16:40:32.722464: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+{"status": 0, "result": [{"apple": "0.0000000288", "banana": "0.0000000000", "orange": "1.0000000000"}]}
 ```
 
 この場合「みかん」の可能性が一番高いと判断した。
