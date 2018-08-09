@@ -43,6 +43,10 @@ $ python keras_cnn_train.py
 > orange ← 3行目が判定結果の 2  
 
 
+![img](src/keras_cnn_train_1.png)  
+![img](src/keras_cnn_train_2.png)  
+
+
 
 
 ## 予測・分類
