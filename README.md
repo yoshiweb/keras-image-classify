@@ -59,7 +59,6 @@ $ python keras_cnn_train.py
 
 ![img](keras_cnn_train_2.png)  
 
-青い線では間違いが減ってるが、オレンジだとスコアが悪くなってるので過学習を起こしてる
 
 
 

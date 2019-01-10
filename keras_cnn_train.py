@@ -10,7 +10,7 @@ from sklearn import model_selection
 from PIL import Image
 
 batch_size = 10
-epochs = 200
+epochs = 25
 image_w = 32
 image_h = 32
 
