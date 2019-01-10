@@ -11,7 +11,6 @@
 $ git clone https://github.com/yoshiweb/keras-image-classify.git
 $ cd keras-image-classify
 $ pip install -r requirements.txt
-$ cd src
 ```
 
 
@@ -38,16 +37,13 @@ $ python keras_cnn_train.py
 - `keras_cnn_model.h5` 学習済みモデルデータ
 - `label.txt` 判別するラベル名が順番に記載されてる
 
-> apple  ← 1行目が判定結果の 0  
-> banana ← 2行目が判定結果の 1  
-> orange ← 3行目が判定結果の 2  
 
-### 精度
+### 精度（正解率）
 
 - acc（青い線）：学習データでの検証結果
 - val_acc（オレンジ）：学習に使用してない画像での検証結果
 
-![img](src/keras_cnn_train_1.png)  
+![img](keras_cnn_train_1.png)  
 
 
 

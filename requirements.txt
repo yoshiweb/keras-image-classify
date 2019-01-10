@@ -1,12 +1,9 @@
 absl-py==0.6.1
 astor==0.7.1
-backports.weakref==1.0.post1
-bleach==3.0.2
 cycler==0.10.0
 gast==0.2.1.post0
 grpcio==1.17.1
 h5py==2.9.0
-html5lib==1.0.1
 Keras==2.2.4
 Keras-Applications==1.0.6
 Keras-Preprocessing==1.0.5
@@ -14,7 +11,6 @@ kiwisolver==1.0.1
 Markdown==3.0.1
 matplotlib==3.0.2
 numpy==1.15.4
-olefile==0.46
 Pillow==5.4.1
 protobuf==3.6.1
 pyparsing==2.3.0
@@ -26,6 +22,4 @@ six==1.12.0
 tensorboard==1.12.2
 tensorflow==1.12.0
 termcolor==1.1.0
-Theano==1.0.3
-webencodings==0.5.1
 Werkzeug==0.14.1
