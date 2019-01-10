@@ -57,7 +57,7 @@ $ python keras_cnn_train.py
 - loss（青い線）：学習データでの検証結果
 - val_loss（オレンジ）：学習に使用してない画像での検証結果
 
-![img](src/keras_cnn_train_2.png)  
+![img](keras_cnn_train_2.png)  
 
 青い線では間違いが減ってるが、オレンジだとスコアが悪くなってるので過学習を起こしてる
 
