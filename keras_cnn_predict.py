@@ -81,7 +81,7 @@ class ImageClassify:
       item_list.append(item_dict)
 
 
-    json_dict['status'] = 0
+    # json_dict['status'] = 0
     json_dict['result'] = item_list
 
 

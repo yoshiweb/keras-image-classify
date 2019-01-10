@@ -71,8 +71,8 @@ $ python keras_cnn_train.py
 ```
 $ python keras_cnn_predict.py img/orange/image_01.jpg
 Using TensorFlow backend.
-2018-08-09 16:40:32.722464: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-{"status": 0, "result": [{"apple": "0.0000000288", "banana": "0.0000000000", "orange": "1.0000000000"}]}
+2019-01-10 11:45:37.519288: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+{"result": [{"apple": "0.0080241589", "banana": "0.0055331937", "orange": "0.9864426851"}]}
 ```
 
 この場合「みかん」の可能性が一番高いと判断した。
